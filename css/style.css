@@ -1,0 +1,112 @@
+/* Recipe Manager – custom styles on top of Bootstrap 5 */
+
+/* ---------- Font: Excalifont (files in /fonts) ---------- */
+@font-face {
+  font-family: "Excalifont";
+  src: url("../fonts/Excalifont-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Excalifont";
+  src: url("../fonts/Excalifont-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  font-display: swap;
+}
+
+/* ---------- Palette ---------- */
+:root {
+  --rm-text:   #1f3d2b;  /* dark green: text and borders */
+  --rm-button: #2e7d4f;  /* green: buttons */
+  --rm-button-hover:  #256a42;
+  --rm-button-active: #1b4f31;
+  --rm-bg:     #eef4fb;  /* light bluish: background */
+
+  --bs-body-bg: var(--rm-bg);
+  --bs-body-color: var(--rm-text);
+  --bs-body-font-family: "Excalifont", "Comic Sans MS", cursive;
+  --bs-border-color: var(--rm-text);
+}
+
+body {
+  background: var(--rm-bg);
+  color: var(--rm-text);
+  font-family: var(--bs-body-font-family);
+}
+
+h1, h2, h3 { font-weight: 400; }
+
+/* ---------- Layout ---------- */
+.app-frame {
+  border: 2px solid var(--rm-text);
+  border-radius: 14px;
+}
+
+.app-nav { flex: 0 0 auto; }
+.min-w-0 { min-width: 0; }
+
+/* phone: narrow vertical menu on the left */
+.app-nav .btn {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.25rem;
+  min-width: 68px;
+}
+
+/* ---------- Buttons ---------- */
+.btn-mint {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: var(--rm-button);
+  --bs-btn-border-color: var(--rm-button);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--rm-button-hover);
+  --bs-btn-hover-border-color: var(--rm-button-hover);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: var(--rm-button-active);
+  --bs-btn-active-border-color: var(--rm-button-active);
+  --bs-btn-focus-shadow-rgb: 46, 125, 79;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+/* ---------- Notes under the title ---------- */
+.app-notes li {
+  padding: 0.4rem 0;
+  border-bottom: 2px dashed var(--rm-text);
+}
+
+/* ---------- Shopping table ---------- */
+.app-table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--rm-text);
+  --bs-table-border-color: var(--rm-text);
+  border-width: 2px;
+}
+
+.app-table th { font-weight: 400; }
+
+.app-table .form-check-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--rm-text);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.app-table .form-check-input:checked {
+  background-color: var(--rm-button);
+  border-color: var(--rm-button);
+}
+
+/* bought items: name is struck through */
+.app-table tr:has(input:checked) td:nth-child(2) {
+  text-decoration: line-through;
+}
+
+/* ---------- Desktop (from 768px) ---------- */
+@media (min-width: 768px) {
+  .app-nav .btn {
+    flex: 1;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+}
