@@ -44,6 +44,13 @@ h1, h2, h3 { font-weight: 400; }
   z-index: 1020;
 }
 
+/* page content: centered in the space under the menu */
+.app-main {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+}
+
 .app-nav .btn {
   flex: 1;
   font-size: 0.85rem;
