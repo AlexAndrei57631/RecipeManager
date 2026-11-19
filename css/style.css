@@ -37,19 +37,17 @@ body {
 h1, h2, h3 { font-weight: 400; }
 
 /* ---------- Layout ---------- */
-.app-frame {
-  border: 2px solid var(--rm-text);
-  border-radius: 14px;
+/* menu bar: always on top, same on every page */
+.app-header {
+  background: var(--rm-bg);
+  border-bottom: 2px solid var(--rm-text);
+  z-index: 1020;
 }
 
-.app-nav { flex: 0 0 auto; }
-.min-w-0 { min-width: 0; }
-
-/* phone: narrow vertical menu on the left */
 .app-nav .btn {
-  font-size: 0.75rem;
+  flex: 1;
+  font-size: 0.85rem;
   padding: 0.5rem 0.25rem;
-  min-width: 68px;
 }
 
 /* ---------- Buttons ---------- */
@@ -105,7 +103,6 @@ h1, h2, h3 { font-weight: 400; }
 /* ---------- Desktop (from 768px) ---------- */
 @media (min-width: 768px) {
   .app-nav .btn {
-    flex: 1;
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
   }

@@ -8,34 +8,35 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container py-3 py-md-4">
-    <div class="app-frame d-flex flex-md-column gap-3 gap-md-4 p-3 p-md-4">
-
-      <nav class="app-nav d-flex flex-column flex-md-row gap-2" aria-label="Main menu">
+  <header class="app-header sticky-top py-2">
+    <div class="container-xl">
+      <nav class="app-nav d-flex gap-2" aria-label="Main menu">
         <a class="btn btn-mint active" href="index.html" target="_blank" rel="noopener" aria-current="page">Home</a>
         <a class="btn btn-mint" href="cookbook.html" target="_blank" rel="noopener">Cookbook</a>
-        <a class="btn btn-mint" href="addrecipe.html" target="_blank" rel="noopener">Add Recipe</a>
+        <a class="btn btn-mint" href="add-recipe.html" target="_blank" rel="noopener">Add Recipe</a>
         <a class="btn btn-mint" href="profile.html" target="_blank" rel="noopener">Profile</a>
       </nav>
+    </div>
+  </header>
 
-      <main class="flex-grow-1 min-w-0">
+  <main class="container-xl py-4">
         <div class="row g-4">
 
-          <section class="col-md-5 d-flex flex-column">
+          <section class="col-md-5">
             <h1 class="h3 mb-3">Shopping List</h1>
             <ul class="list-unstyled app-notes mb-3">
               <li>For: shakshuka and Sunday pancakes</li>
               <li>Store: Kaufland, Saturday morning</li>
               <li>Budget: about 80 lei</li>
             </ul>
-            <button class="btn btn-mint mt-auto align-self-start" type="button">Save list</button>
+            <button class="btn btn-mint" type="button">Save list</button>
           </section>
 
           <section class="col-md-7">
             <table class="table table-bordered align-middle app-table mb-0">
               <thead>
                 <tr>
-                  <th scope="col">Quantity</th>
+                  <th scope="col">How many</th>
                   <th scope="col">Name</th>
                   <th scope="col" class="text-center"><span class="visually-hidden">Bought</span></th>
                 </tr>
@@ -76,9 +77,6 @@
           </section>
 
         </div>
-      </main>
-
-    </div>
-  </div>
+  </main>
 </body>
 </html>
