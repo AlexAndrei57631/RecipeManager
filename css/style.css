@@ -16,7 +16,7 @@
 
 /* ---------- Palette ---------- */
 :root {
-  --rm-text:   #1f3d2b;  /* dark green: text and borders */
+  --rm-text:   #1f3d2b;  /* dark green: text */
   --rm-button: #2e7d4f;  /* green: buttons */
   --rm-button-hover:  #256a42;
   --rm-button-active: #1b4f31;
